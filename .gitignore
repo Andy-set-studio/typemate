@@ -1,5 +1,5 @@
 .DS_Store
-.log
+*.log
 .debug
 .vscode
 node_modules
