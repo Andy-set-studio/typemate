@@ -17,7 +17,6 @@ class TypeMate {
             ignoreClass: 'js-typemate__ignore'
         }, ...settings};
 
-
         // Either load from root or the passed parent element
         if(typeof(parent) === 'undefined') {
             self.elems = [...document.querySelectorAll(self.settings.selector)];

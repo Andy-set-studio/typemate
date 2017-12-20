@@ -4,7 +4,7 @@
   "description": "A little JavaScript module that fixes your typesetting Edit",
   "main": "src/typemate.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src/typemate.js --out-file dist/typemate.js && uglifyjs --compress --mangle -o dist/typemate.min.js -- dist/typemate.js "
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/hankchizljaw/typemate/issues"
   },
-  "homepage": "https://github.com/hankchizljaw/typemate#readme"
+  "homepage": "https://github.com/hankchizljaw/typemate#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs": "^2.4.11"
+  }
 }
