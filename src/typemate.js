@@ -25,8 +25,8 @@ class TypeMate {
             self.elems = [...parent.querySelectorAll(self.settings.selector)];
         }
     }
-	
-	/**
+    
+    /**
      * Apply formatting to the loaded elements
      * @return void
      */
@@ -52,7 +52,7 @@ class TypeMate {
             }
             
             // Run widows filter 
-			textItems = self.preventWidows(textItems);
+            textItems = self.preventWidows(textItems);
 
             // Join the words back together
             result = textItems.join(' ');
@@ -64,33 +64,33 @@ class TypeMate {
             elem.innerHTML = result;
         });
     }
-	
-	/**
+    
+    /**
      * Apply the widows filter to the passed text and return it
      * @param {string} textItems 
      */
-	preventWidows(textItems) {
+    preventWidows(textItems) {
 
-		// Find the second to last work
-		var targetWord = textItems[(textItems.length - 2)];
+        // Find the second to last work
+        var targetWord = textItems[(textItems.length - 2)];
 
-		// Stick a no break space to the end of the word and replace the instance in the array
-		textItems[(textItems.length - 2)] = targetWord + '&nbsp;';
-		
-		return textItems;
-	}
-	
-	/**
+        // Stick a no break space to the end of the word and replace the instance in the array
+        textItems[(textItems.length - 2)] = targetWord + '&nbsp;';
+        
+        return textItems;
+    }
+    
+    /**
      * Reset any formatting 
      * @return void
      */
-	reset() {
-		let self = this;
-		
-		self.elems.map(elem => {
-			elem.innerHTML = elem.innerHTML.replace(/&nbsp;/g, ' ');
-		});
-	}
+    reset() {
+        let self = this;
+        
+        self.elems.map(elem => {
+            elem.innerHTML = elem.innerHTML.replace(/&nbsp;/g, ' ');
+        });
+    }
 }
 
 export default TypeMate;
