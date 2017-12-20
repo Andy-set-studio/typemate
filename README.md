@@ -10,11 +10,15 @@ You can use the dist version of this module by adding it to your page like so:
 
 You can also install it as a dependancy with npm:
 
-`npm install typemate`
+```bash
+npm install typemate
+```
 
 Then import it:
 
-`import TypeMate from 'typemate'`
+```javascript
+import TypeMate from 'typemate';
+```
 
 At its most basic level, we create `TypeMate` instance and it'll look for all of the `<p>` elements on your page.
 
@@ -66,7 +70,7 @@ That settings object now allows `<h2>` elements within `article#content` to be p
 | ------------- | ------ | ---------------------------------------- | --------------------- |
 | `minWords`    | Number | The minimum amount of words that have to be present in an element's content before TypeMate will process it | 4                     |
 | `selector`    | String | The selector string that's passed to `querySelectorAll` | 'p'                   |
-| `ignoreClass` | String | The CSS class that can be added to an element to mark itself as ignorable to TypeMate | 'js-typemate__ignore' |
+| `ignoreClass` | String | The CSS class that can be added to an element to mark itself as ignorable to TypeMate | 'js&#8288;-&#8288;typemate__ignore' |
 
 ## Codepen example
 
