@@ -11,7 +11,7 @@ You can use the dist version of this module by adding it to your page like so:
 You can also install it as a dependancy with npm:
 
 ```bash
-npm install typemate
+npm install typemate --save-dev
 ```
 
 Then import it:
