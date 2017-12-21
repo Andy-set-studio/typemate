@@ -1,5 +1,5 @@
 # TypeMate
-TypeMate is a little JavaScript module that fixes your typesetting woes automatically. Right now it only fixes widows, but the plan is to add more filters in the future that fix other typesetting issues such as line-length.
+TypeMate is a little JavaScript module that fixes your typesetting woes automatically. Right now it only fixes orphans, but the plan is to add more filters in the future that fix other typesetting issues such as line-length.
 
 ## Getting started
 
