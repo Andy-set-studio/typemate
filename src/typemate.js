@@ -51,8 +51,8 @@ class TypeMate {
                 return;
             }
             
-            // Run widows filter 
-            textItems = self.preventWidows(textItems);
+            // Run orphans filter 
+            textItems = self.preventOrphans(textItems);
 
             // Join the words back together
             result = textItems.join(' ');
@@ -66,10 +66,10 @@ class TypeMate {
     }
     
     /**
-     * Apply the widows filter to the passed text and return it
+     * Apply the orphans filter to the passed text and return it
      * @param {string} textItems 
      */
-    preventWidows(textItems) {
+    preventOrphans(textItems) {
 
         // Find the second to last work
         var targetWord = textItems[(textItems.length - 2)];
