@@ -1,6 +1,6 @@
 {
   "name": "typemate",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A little JavaScript module that fixes your typesetting Edit",
   "main": "dist/typemate.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0"
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0"
   }
 }

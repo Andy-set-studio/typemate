@@ -93,4 +93,6 @@ class TypeMate {
     }
 }
 
-export default TypeMate;
+export default function(parent, settings = {}) {
+    return new TypeMate(parent, settings);
+};
