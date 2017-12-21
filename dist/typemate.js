@@ -44,9 +44,9 @@ var TypeMate = function () {
     }
 
     /**
-        * Apply formatting to the loaded elements
-        * @return void
-        */
+     * Apply formatting to the loaded elements
+     * @return void
+     */
 
 
     _createClass(TypeMate, [{
@@ -87,9 +87,9 @@ var TypeMate = function () {
         }
 
         /**
-            * Apply the widows filter to the passed text and return it
-            * @param {string} textItems 
-            */
+         * Apply the widows filter to the passed text and return it
+         * @param {string} textItems 
+         */
 
     }, {
         key: 'preventWidows',
@@ -105,9 +105,9 @@ var TypeMate = function () {
         }
 
         /**
-            * Reset any formatting 
-            * @return void
-            */
+         * Reset any formatting 
+         * @return void
+         */
 
     }, {
         key: 'reset',

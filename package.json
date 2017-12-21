@@ -1,10 +1,10 @@
 {
   "name": "typemate",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A little JavaScript module that fixes your typesetting Edit",
-  "main": "src/typemate.js",
+  "main": "dist/typemate.js",
   "scripts": {
-    "build": "browserify src/typemate.js -o dist/typemate.js -t babelify && uglifyjs --compress --mangle -o dist/typemate.min.js -- dist/typemate.js "
+    "build": "browserify src/typemate.js -o dist/typemate.js -t babelify"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "uglifyjs": "^2.4.11"
+    "babelify": "^8.0.0"
   }
 }
