@@ -11,11 +11,11 @@ class TypeMate {
         let self = this;
 
         // Set some settings, by merging defaults and passed settings
-        self.settings = {...{
+        self.settings = Object.assign({
             minWords: 4,
             selector: 'p',
             ignoreClass: 'js-typemate__ignore'
-        }, ...settings};
+        }, settings);
 
         // Either load from root or the passed parent element
         if(typeof(parent) === 'undefined') {
@@ -91,8 +91,8 @@ class TypeMate {
             elem.innerHTML = elem.innerHTML.replace(/&nbsp;/g, ' ');
         });
     }
-}
+};
 
-export default function(parent, settings = {}) {
+module.exports = function(parent, settings = {}) {
     return new TypeMate(parent, settings);
 };
