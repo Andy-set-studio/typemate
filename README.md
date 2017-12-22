@@ -71,4 +71,32 @@ That settings object now allows `<h2>` elements within `article#content` to be p
 
 Check out an example of TypeMate over at CodePen: https://codepen.io/hankchizljaw/project/full/ZgpRNy
 
+## Running tests
+
+Tests are defined as simple test cases in `tests.json`.
+
+Each test case can define:
+
+| Key        | Type    | Description                             | Default Value |
+| ---------- | ------- | --------------------------------------- | ------------- |
+| `parent`   |  String | selector of the parent element to use   | `undefined`   |
+| `settings` |  Object | settings object                         |  `null`       |
+| `init`     |  String | initial HTML to test against            |               |
+| `apply`    |  String | expected HTML after `apply()` is called | `this.init`   |
+| `reset`    |  String | expected HTML after `reset()` is called | `this.init`   |
+
+### Using NPM
+
+```bash
+npm i
+npm run test
+```
+
+### Using Yarn
+
+```bash
+yarn
+yarn test
+```
+
 Made with ❤️ by [HankChizlJaw](https://twitter.com/hankchizljaw).
