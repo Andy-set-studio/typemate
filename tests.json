@@ -1,0 +1,40 @@
+{
+  "Will only target the parent element if present": {
+    "parent": "aside",
+    "init": "<article><p>Etiam porta sem malesuada.</p></article><aside><p>Maecenas sed diam eget risus.</p></aside>",
+    "apply": "<article><p>Etiam porta sem malesuada.</p></article><aside><p>Maecenas sed diam eget&nbsp;risus.</p></aside>"
+  },
+  "By default only selects <p> tag": {
+    "init": "<h1>A heading</h1><p>Etiam porta sem malesuada magna mollis euismod.</p><p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>",
+    "apply": "<h1>A heading</h1><p>Etiam porta sem malesuada magna mollis&nbsp;euismod.</p><p>Maecenas sed diam eget risus varius blandit sit amet non&nbsp;magna.</p>"
+  },
+  "Fewer than minWords (default 4) settings has no affect": {
+    "init": "<p>Etiam porta sem.</p>",
+    "apply": "<p>Etiam porta sem.</p>"
+  },
+  "Tags with the ignoreClass class will be ignored": {
+    "init": "<p class=\"js-typemate__ignore\">Etiam porta sem malesuada.</p><p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>",
+    "apply": "<p class=\"js-typemate__ignore\">Etiam porta sem malesuada.</p><p>Maecenas sed diam eget risus varius blandit sit amet non&nbsp;magna.</p>"
+  },
+  "Can override minWords setting": {
+    "settings": {
+      "minWords": 3
+    },
+    "init": "<p>Etiam porta sem.</p>",
+    "apply": "<p>Etiam porta&nbsp;sem.</p>"
+  },
+  "Can override selector setting": {
+    "settings": {
+      "selector": "p,h1"
+    },
+    "init": "<h1>My silly long heading</h1><p>Etiam porta sem malesuada.</p>",
+    "apply": "<h1>My silly long&nbsp;heading</h1><p>Etiam porta sem&nbsp;malesuada.</p>"
+  },
+  "Can override ignoreClass setting": {
+    "settings": {
+      "ignoreClass": "ignore"
+    },
+    "init": "<p class=\"ignore\">Etiam porta sem malesuada.</p>",
+    "apply": "<p class=\"ignore\">Etiam porta sem malesuada.</p>"
+  }
+}
