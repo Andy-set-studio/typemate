@@ -2,19 +2,19 @@ var jsdom = require('jsdom-global')
 var TypeMate = require('./src/typemate');
 var assert = require('assert');
 var _ = require('lodash');
-var fs = require("fs");
+var fs = require('fs');
 
 before(function () {
-    this.jsdom = require('jsdom-global')()
+    this.jsdom = require('jsdom-global')();
 })
 
 after(function () {
-    this.jsdom()
+    this.jsdom();
 })
 
 describe('TypeMate tests', function () {
     var tests = JSON.parse(
-        fs.readFileSync(__dirname + "/tests.json")
+        fs.readFileSync(__dirname + '/tests.json')
     );
 
     _.each(tests, function ({parent, settings, init, apply, reset}, description) {
