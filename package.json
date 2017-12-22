@@ -3,7 +3,9 @@
   "version": "0.5.0",
   "description": "A little JavaScript module that fixes your typesetting Edit",
   "main": "src/typemate.js",
-  "scripts": {},
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hankchizljaw/typemate.git"
@@ -14,5 +16,10 @@
     "url": "https://github.com/hankchizljaw/typemate/issues"
   },
   "homepage": "https://github.com/hankchizljaw/typemate#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "jsdom": "^11.5.1",
+    "jsdom-global": "^3.0.2",
+    "lodash": "^4.17.4",
+    "mocha": "^4.0.1"
+  }
 }
