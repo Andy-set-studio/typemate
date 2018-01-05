@@ -99,4 +99,6 @@ yarn
 yarn test
 ```
 
-Made with ❤️ by [HankChizlJaw](https://twitter.com/hankchizljaw).
+---
+
+Made with ❤️ by [HankChizlJaw](https://twitter.com/hankchizljaw) and [friends](https://github.com/hankchizljaw/typemate/graphs/contributors).
