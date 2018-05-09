@@ -1,6 +1,6 @@
 {
   "name": "typemate",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A little JavaScript module that fixes your typesetting Edit",
   "main": "src/typemate.js",
   "scripts": {
