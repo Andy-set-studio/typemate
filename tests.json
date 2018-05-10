@@ -36,5 +36,12 @@
     },
     "init": "<p class=\"ignore\">Etiam porta sem malesuada.</p>",
     "apply": "<p class=\"ignore\">Etiam porta sem malesuada.</p>"
+  },
+  "Will ignore element if there's 1 or more &nbsp; characters present": {
+    "settings": {
+      "ignoreExistingSpaceChars": true
+    },
+    "init": "<p>Some text with an existing&nbsp;character</p>",
+    "apply": "<p>Some text with an existing&nbsp;character</p>"
   }
 }

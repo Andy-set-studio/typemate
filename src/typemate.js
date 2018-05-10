@@ -14,7 +14,8 @@ class TypeMate {
         self.settings = Object.assign({
             minWords: 4,
             selector: 'p',
-            ignoreClass: 'js-typemate__ignore'
+            ignoreClass: 'js-typemate__ignore',
+            ignoreExistingSpaceChars: false 
         }, settings);
 
         // Either load from root or the passed parent element
@@ -37,6 +38,11 @@ class TypeMate {
 
             // Bail out if the ignore class is present on this element  
             if(elem.classList.contains(self.settings.ignoreClass)) { 
+                return false;
+            }
+
+            // Run the ignore checker nd bail if required
+            if(self.shouldElementBeIgnored(elem)) {
                 return false;
             }
 
@@ -88,8 +94,32 @@ class TypeMate {
         let self = this;
         
         self.elems.map(elem => {
+            
+            // Run the ignore checker nd bail if required
+            if(self.shouldElementBeIgnored(elem)) {
+                return false;
+            }
+
             elem.innerHTML = elem.innerHTML.replace(/&nbsp;/g, ' ');
         });
+    }
+
+    /**
+     * Run checks to see if the passed element should be skipped
+     * 
+     * @param {HTMLElement} elem 
+     * @returns boolean
+     */
+    shouldElementBeIgnored(elem) {
+        let self = this;
+
+        // Check if the element already contains 1 or more &nbsp; characters and the 
+        // ignore setting is true. If so: bail.
+        if((elem.innerHTML.indexOf('&nbsp;') > -1) && self.settings.ignoreExistingSpaceChars) {
+            return true; 
+        }
+
+        return false;
     }
 };
 

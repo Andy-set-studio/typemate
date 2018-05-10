@@ -66,6 +66,7 @@ That settings object now allows `<h2>` elements within `article#content` to be p
 | `minWords`    | Number | The minimum amount of words that have to be present in an element's content before TypeMate will process it | 4                                   |
 | `selector`    | String | The selector string that's passed to `querySelectorAll` | 'p'                                 |
 | `ignoreClass` | String | The CSS class that can be added to an element to mark itself as ignorable to TypeMate | 'js&#8288;-&#8288;typemate__ignore' |
+| `ignoreExistingSpaceChars`    | Boolean | Determine if elements should be ignored if they already contain an `&nbsp;` character | false                                 |
 
 ## Codepen example
 
