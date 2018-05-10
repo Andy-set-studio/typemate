@@ -50,7 +50,7 @@ class TypeMate {
             var result = '';
 
             // Split words/tags into array
-            let textItems = elem.innerHTML.trim().replace(/&nbsp;/g, '').split(/ (?=[^>]*(?:<|$))/);
+            let textItems = elem.innerHTML.trim().replace(/&nbsp;/g, ' ').split(/ (?=[^>]*(?:<|$))/);
 
             // Check if the text warrants this module
             if(textItems.length < self.settings.minWords) {
